@@ -13,7 +13,7 @@ app.post ('/login',(req,res) => {
     const token = jwt.sign(user,'secretkey')
         res.json({
             token : token
-        })
+        });
 });
 
 app.get('/api/get',verifyToken,(req,res) => {
